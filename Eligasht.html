@@ -1,0 +1,2695 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>آژانس هواپیمایی الی گشت | فروش بلیط هواپیما ، قطار ، هتل ، تور</title>
+		<link rel="stylesheet" href="fontawesome/css/all.min.css">
+		<link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
+        <style>
+            *{margin: 0px; padding: 0px;}
+			@font-face{
+                font-family: newfont;
+                src: url("Persian Font/FontsFree-Net-ir_sans.ttf");
+            }
+            nav{
+				height: 65px;
+				background-color: white;
+				position: sticky;
+				top: 0px;
+				padding-left: 30px;
+                padding-right: 30px;
+				z-index: 10;
+			}
+            #textlogo{
+				height: 45px;
+				width: 75px;
+				position: absolute;
+				top: 12px;
+				right: 90px;
+			}
+            #threelines{
+				position: absolute;
+				top: 20px;
+				right: 30px;
+				font-size: 27px;
+				color: #545454
+			}
+            .loginbutton {
+				width: 100px;
+				height: 36px;
+				background-color: #005792;
+				border-radius: 5px;
+				position: absolute;
+				top: 14.5px;
+				left: 30px;
+				text-align: center;
+				font-family: newfont;
+				transition: 0.5s;
+                line-height: 35px;
+                font-size: 13px;
+			}
+            .loginbutton a{
+				color: white;
+                text-decoration: none;
+            }
+            .loginbutton:hover{
+				background-color:#00416D;
+			}
+            .aside{
+				position: fixed;
+				right: 0px;
+				top: 120px;
+			}
+            .aside li{
+				width: 76px;
+				height: 50px;
+				list-style-type: none;
+				text-align: center;
+				font-family: newfont;
+				font-size: 12.5px;
+				padding: 15px 10px;
+			}
+            .aside li:hover {
+				background-color: #F2F2F0
+			}
+            .mc{ /**menu category**/
+				text-decoration: none;
+				color: #545454;
+				line-height: 20px;
+			}
+            #sec1{
+				height: 744px;
+				background-color: white;
+			}
+            .mid{
+				border-radius: 10px;
+				box-shadow: 1px 1px 9px -3px black;	
+				margin: 30px auto;
+				width: 1160px;
+				height: 109.2px;	
+				display: flex;	
+			}
+            .mid li{
+				width: 192.67px;
+				height: 109.2px;
+				list-style-type: none;
+				text-align: center;
+				font-family: newfont;
+				font-size: 16px;
+				color: #272e4f;
+				line-height: 20px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			.line{
+				border-right: 1px solid #dadce0;	
+			}
+			.midicon{
+				font-size: 32px;
+				line-height: 55px;
+				-webkit-text-stroke: 1.5px #ff471a;;
+				color: transparent;
+			}
+			.mid li:hover {
+				background-color: #F2F2F0;
+			}
+			.mid2{
+				width: 1160px;
+				height: 84px;
+				background-color: white;
+				border-radius: 10px;
+				box-shadow: 1px 1px 9px -3px black;
+				margin: 0px auto;
+			}
+			.mid2>a{
+				color: black;
+			}
+			.searchfield{
+				width: 592.617px;
+				height: 84px;
+				border-left: 1px solid #dadce0;
+				float: right;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: relative;
+			}
+			.calendar{
+				width: 400.716px;
+				height: 84px;
+				float: left;
+				display: flex;
+				direction: rtl;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				font-size: 23px;
+			}
+			.calendar:hover{
+				cursor: pointer;
+			}
+			.date1, .date2{
+				width: 155.267px;
+				height: 57px;
+				line-height: 50px;
+			}
+			.date1{
+				border-left: 1px solid #dadce0;
+				text-align: right;
+			}
+			.calicon{
+				-webkit-text-stroke: 1px #ff471a;
+				color: transparent;
+				font-size: 20px;
+			}
+			.from, .to{
+				width: 215.9px;
+				height: 64.6px;
+				padding: 0px 30px;
+				border: 1px solid #dadce0;
+				border-radius: 4px;
+				display: flex;
+				align-items: center;
+				direction: rtl;
+				font-family: newfont;
+				font-size: 13px;
+			}
+			.semicircle{
+				position: absolute;
+				height: 40px;
+				width: 20px;
+				border-top-left-radius: 40px;
+				border-bottom-left-radius: 40px;
+				border-left: 1px solid #dadce0;
+				border-top: 1px solid #dadce0;
+				border-bottom: 1px solid #dadce0;
+				top: 21px;
+				left: 266px;
+				border-right: 2px solid white;
+			}
+			.semicircle2{
+				position: absolute;
+				height: 40px;
+				width: 20px;
+				border-top-right-radius: 40px;
+				border-bottom-right-radius: 40px;
+				border-right: 1px solid #dadce0;
+				border-top: 1px solid #dadce0;
+				border-bottom: 1px solid #dadce0;
+				top: 21px;
+				right: 266px;
+				border-left: 2px solid white;
+			}
+			.exchange{
+				color: #dadce0;
+				
+			}
+			.searchbutton{
+				background-color: #005792;
+				width: 162.667px;
+				height: 100%;
+				border-top-left-radius: 10px;
+				border-bottom-left-radius: 10px;
+				border: none;
+				color: white;
+				font-size: 21px;
+				float: left;
+			}
+			.searchbutton:hover {
+				background-color:#0c4871;
+				cursor: pointer;
+			}
+			.toolbar{
+				direction: rtl;
+				width: 1160px;
+				height: 44px;
+				margin: 10px auto;
+				position: relative;
+				z-index: 1;
+			}
+			.toolbar>li{
+				display: inline-block;
+				list-style-type: none;
+				font-size: 15px;
+				margin: 0px 10px;
+				font-family: newfont;
+				line-height: 50px;
+			}
+			.dropdown{
+				width: 297px;
+				height: 295px;
+				background-color: white;
+				box-shadow: 1px 1px 9px -3px black;
+				position: absolute;
+				border-radius: 10px;
+				display: none;
+				font-size: 15px;
+			}
+			.drp1content{
+				height: 267px;
+				width: 295px;
+				margin: 15px 0px;
+
+			}
+			.drp1content ul li{
+				display: flex;
+				align-items: baseline;
+				margin: 15px auto;
+				align-items: center;
+			}
+			.drp1content ul{
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				align-items: baseline;
+				margin: 30px 0px;
+
+			}
+			.numbercontent{
+				width: 35px;
+				height: 30px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.dropdown2, .dropdown3{
+				width: 200px;
+				height: 188px;
+				background-color: white;
+				box-shadow: 1px 1px 9px -3px black;
+				position: absolute;
+				border-radius: 10px;
+				display: none;
+				font-size: 15px;
+			}
+			.drp2content, .drp3content{
+				width: 200px;
+				height: 168px;
+				margin: 10px auto;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+
+			}
+			.radio-list, .radio-list2{
+				width: 200px;
+				height: 46px;
+				display: flex;
+				justify-content: center;
+				align-items: baseline;
+				text-align: right;
+			}
+			.choosed{
+				background-color: #f3f5f7;
+			}
+			.choosed>span{
+				margin-left: 15px;
+				color:rgb(78, 78, 78);
+			}
+			.radio-list:hover, .radio-list2:hover{
+				background-color: #f3f5f7;
+				cursor: pointer;
+			}
+			.age{
+				width: 150px;
+				height: 40px;
+				display: flex;
+				align-items: center;
+			}
+			.troublemaker{
+				width: 62px;
+				height: 40px;
+				display: flex;
+				flex-direction: column;
+				line-height: 20px;
+				margin: 0px;
+			}
+			.ageinstruct{
+				font-size: 10px;
+			}
+			.plus, .minus{
+				width: 30px;
+				height: 30px;
+				color: #005792;
+				background-color: #e8f0fe;
+				border-radius: 4px;
+				text-align: center;
+				line-height: 30px;
+				cursor: pointer;
+			}
+			.numbercontent{
+				text-align: center;
+			}
+			.subandcan{ /**submit and cancel**/
+				height: 32px;
+				width: 290px;
+				margin: 0px auto;
+				direction: rtl;
+			}
+			#sub1{
+				float: left;
+				color: #4285f4;
+				width: 80px;
+				text-align: center;
+				height: 32px;
+				line-height: 30px;
+				border-radius: 2px;
+			}
+			#can1{
+				float: left;
+				color: black;
+				width: 80px;
+				height: 32px;
+				line-height: 30px;
+				text-align: center;
+				border-radius: 2px;
+			}
+			#sub1:hover, #can1:hover{
+				background-color: rgba(0,0,0,.12);
+			}
+			.numberofpassengers:hover .dropdown{
+				display: block;
+				top: -25px;
+				right: -1px;
+			}
+			.twoways:hover .dropdown2{
+				display: block;
+				top: -25px;
+				right: 75px;
+			}
+			.economy:hover .dropdown3{
+				display: block;
+				top: -25px;
+				right: 210px;
+			}
+			.dropdown ul{
+				height: 178px;
+				width: 295px;
+			}
+			.dropdown ul>li{
+				list-style-type: none;
+			}
+			.triangle{
+				color: #6c757d;
+			}
+			.toolbar li a{
+				text-decoration: none;
+				color: black;
+			}
+			.clear{
+				clear: both;
+			}
+			.flight-search{
+				width: 1330px;
+				margin: 0px auto;
+				position: relative;
+			}
+			.search{
+				width: 380px;
+				height: 55px;
+				border-radius: 10px;
+				box-shadow: 1px 3px 7px -3px black;	
+				direction: rtl;
+				font-family: newfont;
+				font-size: 18px;
+				background-color: white;
+				position: absolute;
+				bottom: 24.5px;
+				left:470.5px;
+			}
+			.fa-search{
+				line-height: 54px;
+				margin: 0px 15px;
+				color: #545454;
+			}
+			#sec2{
+				background-color: #ebecf0;
+			}
+			.layout{
+				margin: 0px auto;
+				width:1145px;
+				font-family: newfont;
+				direction: rtl;
+				position: relative;
+				/**border: 2px solid black;**/
+			}
+			#heading{
+				text-align: center;
+				font-family: newfont;
+				font-size: 25px;
+				padding-top: 50px;
+			}
+			.box{
+				width: 1040px;
+				height: 140px;
+				margin: 40px auto;
+				background-color: white;
+				border-radius: 10px;
+				padding: 50px 50px;
+				box-shadow: 1px 3px 7px -3px black;
+				position: relative;
+				direction: rtl;
+				font-family: newfont;
+			}
+			.text{
+				line-height: 30px;
+				margin-right:90px;
+			}
+			.text p{
+				margin: 15px 0px;
+				text-align: justify;
+			}
+			.close{
+				position: absolute;
+				top: 20px;
+				left: 20px;
+				font-size: 20px;
+				color: #949699;
+			}
+			.close:hover{
+				color: rgb(78, 78, 78);
+				cursor: pointer;
+			}
+			#logo{
+				position: absolute;
+				top: 35px;
+				right:25px;
+				width: 94.8501px;
+				height: 60px;
+			}
+			.section{
+				margin: 60px 5px 50px 0px;
+				font-size: 25px;
+				color: #272e4f;
+				direction: rtl;
+			}
+			.col1, .col2, .col3{
+				display: flex;
+				justify-content: space-around;
+				margin-bottom: 20px;
+				flex-direction: row-reverse;
+			}
+			.minibox{
+				width: 260px;
+				height: 367.8px;
+				position: relative;	
+				background-color: white;
+				box-shadow: 1px 3px 7px -3px black;
+				border-radius: 5px;
+				transition: 0.5s;
+				bottom: 0px;
+				left: 0px;
+			}
+			.pic>img{
+				transition: 0.5s;
+				width: 260px;
+			}
+			.pic{
+				width: 260px;
+				height: 169px;
+				overflow: hidden;
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+			}
+			.mb{ /**Mini box**/
+				width: 260px;
+				height: 200px;
+				position: absolute;
+			}
+			.minibox:hover img{
+				transform: scale(1.3);
+			}
+			.minibox:hover{
+				bottom: 10px;
+			}
+			.checked{
+				color: orange;
+			}
+			.clear{
+				clear: both;
+			}
+			.hotel-name{
+				font-weight: 700;
+				font-size: 13px;
+				color: #21388c;	
+				margin: 20px 25px 15px 25px;
+			}
+			.checked{
+				float: left;
+				font-size: 13px;
+				line-height: 15px;
+				color: orange;
+			}
+			.star{
+				float: left;
+				font-size: 13px;
+				line-height: 15px;
+				color:lightgrey;
+			}
+			.minibox .par{
+				font-size: 12px;
+				margin-right: 25px;	
+				color: black;
+				font-weight: 600;
+			}
+			.info{
+				font-size: 12px;
+				margin-right: 25px;
+				margin-top: 5px;
+				margin-bottom: 15px;
+				color: black;
+			}
+			.gb{
+				margin-right: 25px;
+				width: 30px;
+				height: 30px;
+				background-color:#7cb342;
+				color: white;
+				text-align: center;
+				line-height: 2.3;
+				display: inline-block;
+			}
+			.score{
+				font-size: 13px;
+				color: black;
+				margin-bottom: 10px;
+			}
+			.sc{
+				color: #21388c;
+				margin-right: 5px;
+			}
+			.price{
+				margin-right: 10px;
+				font-size: 16px;
+				color: black;
+			}
+			.start{
+				font-size: 12px;
+				margin-right: 25px;
+				color: black;
+			}
+			.c1, .c2{
+				display: flex;
+				justify-content: space-around;
+			}
+			.sbox{
+				width: 272.5px;
+				height: 203.2px;
+				background-color: white;
+				box-shadow: 1px 3px 7px -3px black;
+				border-radius: 5px;
+				margin-bottom: 20px;
+				position: relative;
+				bottom: 0px;
+				transition: 0.5s;
+			}
+			.sbox:hover{
+				bottom: 10px;
+			}
+			.desc{
+				font-size: 13px;
+			}
+			.airline, .trainline{
+				font-size: 12px;
+				margin: 10px 0px;
+				display: flex;
+				align-items: center;
+			}
+			.deta{
+				width: 240.73px;
+				height: 171.767px;
+				margin: 15px auto;
+				font-size: 14px;
+				display: flex;
+				justify-content: space-between;
+				flex-direction: column;
+			}
+			.flight-dest, .train-dest{
+				width: 240.733px;
+				height: 26.7667px;
+				display: flex;
+				justify-content: space-between;
+				align-items: baseline;
+			}
+			.mahanair{
+				width: 30px;
+				height: 20px;
+				margin-left: 15px;
+			}
+			.aseman{
+				width: 30px;
+				height: 30px;
+				margin-left: 15px;
+			}
+			.iranair{
+				margin-left: 15px;
+				width: 30px;
+				height: 26.4px;
+			}
+			.qeshmair{
+				height: 25px;
+				margin-left: 10px;
+			}
+			.vareshair{
+				width:25px;
+				margin-left: 10px;
+			}
+			.Raja{
+				width: 40px;
+				margin-left: 15px;
+			}
+			.Fadak{
+				height: 35px;
+				margin-left: 15px;
+			}
+			.circle{
+				font-size: 7px;
+			}
+			.flight-time, .train-time{
+				font-size: 12px;
+				margin-bottom: 15px;
+				width: 240.733px;
+				height: 28px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.flight-details, .train-details{
+				width: 240.733px;
+				display: flex;
+				direction: rtl;
+				justify-content: space-between;
+				align-items: center;
+				font-size: 14px;
+				color: #272e4f
+			}
+			.colu1, .colu2{
+				display: flex;
+				justify-content: space-around;
+			}
+			.cbox{
+				width: 533.4px;
+				height: 200px;
+				margin-bottom: 20px;
+				box-shadow: 1px 3px 7px -3px black;
+				border-radius: 10px;
+				background-color: white;
+				display: flex;
+			}
+			.next{
+				width: 29px;
+				height: 36px;
+				background-color: #005792;
+				position: absolute;
+				border-radius: 6px;
+				right: -30px;
+				top: 283px;
+				border: none;
+			}
+			.angle{
+				color: white;
+			}
+			.previous{
+				width: 29px;
+				height: 36px;
+				background-color: #005792;
+				position: absolute;
+				border-radius: 6px;
+				left: -30px;
+				top: 283px;
+				border: none;
+			}
+			.pic1{
+				width: 266.7px;
+				height: 200px;
+				overflow: hidden;
+				background-image: url(Images/Hotel-Helma.jpg);
+				background-position: center;
+				background-size: cover;
+				border-top-left-radius: 0px;
+				border-bottom-left-radius: 0px;
+				cursor: pointer;
+				position: relative;
+			}
+			.pic2{
+				width: 266.7px;
+				height: 200px;
+				overflow: hidden;
+				background-image: url(Images/Hotel-Bozorg-Tehran.jpg);
+				background-position: center;
+				background-size: cover;
+				border-top-left-radius: 0px;
+				border-bottom-left-radius: 0px;
+				cursor: pointer;
+				position: relative;
+			}
+			.pic3{
+				width: 266.7px;
+				height: 200px;
+				overflow: hidden;
+				background-image: url(Images/Hotel-Aban.jpg);
+				background-position: center;
+				background-size: cover;
+				border-top-left-radius: 0px;
+				border-bottom-left-radius: 0px;
+				cursor: pointer;
+				position: relative;
+			}
+			.pic4{
+				width: 266.7px;
+				height: 200px;
+				overflow: hidden;
+				background-image: url(Images/Hotel-Almas.jpg);
+				background-position: center;
+				background-size: cover;
+				border-top-left-radius: 0px;
+				border-bottom-left-radius: 0px;
+				cursor: pointer;
+				position: relative;
+			}
+			.duration{
+				width: 112.717px;
+				height: 44px;
+				background-color: white;
+				position: absolute;
+				top: 11px;
+				right: 12px
+			}
+			.duration a{
+				text-decoration: none;
+				color: black;
+				text-align: center;
+				line-height: 45px;
+				font-size: 16px;
+			}
+			.hotelinfos{
+				width: 266.7px;
+				height: 200px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.hicontent{
+				height: 144px;
+				width: 150.067px;
+				text-align: center;
+			}
+			.hititle{
+				margin: 5px auto;
+			}
+
+			.hititle a{
+				text-decoration: none;
+				color: #3c3b3b;
+				font-size: 15px;
+				text-align: center;
+			}
+			.hilocat, .hiairline{
+				color: #3c3b3b;
+				font-size: 13px;
+				margin: 10px auto;
+				text-align: center;
+			}
+			.hiprice{
+				color: #104096;
+				font-size: 17px;
+				direction: rtl;
+				text-align: center;
+				margin-top: 5px;
+				font-weight: bold;
+			}
+			.hiplane, .hicity{
+				color:#ff471a;
+			}
+			.al{
+				border-bottom: 1px solid #5392bf;
+				margin-top: 50px
+			}
+			.al li{
+				display: inline-block;
+				width: 136.533px;
+				height: 46.6px;
+				text-align: center;
+				line-height: 45px;
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+			}
+			.al li:hover{
+				background-color: #5392bf;
+			}
+			.al li:hover a{
+				color: #fff;
+			}
+			.al li a{
+				text-decoration: none;
+				font-size: 14px;
+				color: #737373;
+			}
+			.city{
+				width: 346.2px;
+				height: 64.8px;
+				border-bottom: 1px solid #e5ebf0;
+				margin-bottom: 10px;
+			}
+			.city li{
+				list-style-type: none;
+				display: inline-block;
+				font-size: 15px;
+			}
+			.city li a{
+				text-decoration: none;
+				color: #0071c2;
+			}
+			.city li a:hover{
+				color: #ff5e3a;
+				border-bottom: 1px solid;
+			}
+			.colum1, .colum2, .colum3, .colum4 , .colum5, .colum6{
+				display: flex;
+				justify-content: space-between;
+			}
+			.bullet{
+				color: #0071c2;
+			}
+			.lastpart{
+				margin-bottom: 150px;
+			}
+			.footimg{
+				width: 992px;
+				height: 78px;
+				display: flex;
+				margin: 0px auto;
+				display: flex;
+				justify-content: center;
+				flex-direction: row-reverse;
+				border-bottom: 1px solid #dadce0;
+				padding: 20px 0px;
+			}
+			.footimg a{
+				width: 110px;
+				height: 78px;
+				display: flex;
+				justify-content: center;
+			}
+			.footimg a img{
+				height: 100%;
+				margin: 0px 15px;
+			}
+			.footerdescription{
+				margin-top: 20px;
+				text-align: center;
+				font-size: 13px;
+				color: #5f6368;
+				line-height: 1.7;
+			}
+			.contact{
+				height: 39px;
+				width: 962px;
+				margin: 20px auto;
+				display: flex;
+				justify-content: center;
+				flex-direction: row-reverse;
+				align-content: baseline;
+			}
+			.cont{
+				color: #5f6368;
+				font-size: 20px;
+				margin: 0px 10px;
+			}
+			.contact2{
+				width: 962px;
+				height: 80px;
+				display: flex;
+				justify-content: center;
+				margin: 0px auto;
+			}
+			.contact2 a{
+				text-decoration: none;
+				margin: 0px 15px;
+				color: #007aff;
+				border-radius: 4px;
+				width: 113.333px;
+				height: 39.6px;
+				text-align: center;
+				line-height: 39px;
+				font-size: 15px;
+			}
+			.contact2 a:hover{
+				color: #174ea6;
+				background-color: #f6fafe;
+			}
+			.fixed{
+				position: fixed;
+				right: 30px;
+				bottom: 30px;
+				text-align: center;
+				border: 1px solid #005792;
+				background-color: #005792;
+				border-radius: 50%;
+				width: 54.4px;
+				height: 54.4px;
+				line-height: 57px;
+				transition: 0.5s;
+			}
+			.fixed:hover{
+				background-color: #064269;
+			}
+			.fixed a{
+				color: white;
+			}
+		</style>
+    </head>
+    <body>
+		<a name="top"></a>
+        <nav>
+			<div class="loginbutton">
+				<a href="Eligasht.html" title="Log in">
+					ورود
+				</a>
+			</div>
+			<a href="Eligasht.html" title="TextLogo">
+				<img src="Logo/companies_logo_128x128.png" alt="textlogo" id="textlogo">
+			</a>
+			<a href="" title="Menu">
+				<span class="fa fa-bars" id="threelines"></span>
+			</a>
+        </nav>
+        <ul class="aside">
+            <li>
+				<a href="" title="Menu Category" class="mc">
+					<div>
+						<img src="6.png" alt="Plane" width="20px";>
+					</div>
+					<div>
+						بلیط هواپیما 
+					</div>
+				</a>
+			</li>
+            <li>
+				<a href="" title="Menu Category" class="mc">
+					<div>
+						<span class="fa fa-bed"></span>
+					</div>
+					<div>
+						رزرو هتل
+					</div>
+				</a>
+			</li>
+            <li>
+				<a href="" title="Menu Category" class="mc">
+					<div>
+						<img src="4.png" alt="Hotel">
+					</div>
+					<div>
+						 تور مسافرتی 
+					</div>
+				</a>
+			</li>
+            <li>
+				<a href="" title="Menu Category" class="mc">
+					<div>
+						<img src="3.png" alt="Luggage">
+					</div>
+					<div>
+						پکیج مسافرتی
+					</div>
+				</a>
+			</li>
+            <li>
+				<a href="" title="Menu Category" class="mc">
+					<div>
+						<span class="fa fa-subway fa-lg"></span>
+					</div>
+					<div>
+						 قطار
+					</div>
+				</a>
+			</li>
+            <li>
+				<a href="" title="Menu Category" class="mc">
+					<div>
+						<span class="fa fa-umbrella"></span>
+					</div>
+					<div>
+						 بیمه مسافرتی
+					</div>
+				</a>
+			</li>
+        </ul>
+        <div id="sec1">
+            <div class="flight-search">
+				<img src="Images/flight-search.jpg" alt="Eligasht Flight Search" title="Flight Flight Search">
+				<div class="search">
+					<i class="fa fa-search"></i>جستجو
+				</div>
+            </div>
+            <ul class="mid">
+                <li class="line">
+					<span class="fa fa-umbrella midicon"></span>
+					<br>
+					<div> بیمه مسافرتی</div>
+				</li>
+                <li class="line">
+					<span class="fa fa-subway midicon"></span>
+					<br>
+					 <div> قطار</div>
+				</li>
+                <li class="line">
+					<img src="L3.png" alt="Luggage">
+					<br>
+					<div> پکیج مسافرتی</div>
+				</li>
+                <li class="line">
+					<span class="fa fa-luggage midicon"></span>
+					<br>
+					 تور مسافرتی 
+				</li>
+                <li class="line">
+					<span class="fa fa-bed midicon"></span>
+					<br>
+					<div>رزرو هتل</div>
+				</li>
+                <li>
+					<span class="fa fa-plane midicon"></span>
+					<br>
+					بلیط هواپیما 
+				</li>
+			</ul>
+			<ul class="toolbar">
+				<li class="numberofpassengers">
+					<a href="" title="Number of Passengers">
+						۱ مسافر
+						<span class="fas fa-caret-down triangle"></span>
+					</a>
+					<div class="dropdown">
+						<div class="drp1content">
+							<ul>
+								<li>
+									<div class="age">بزرگسال</div>
+									<span class="fas fa-plus plus"></span>
+									<div class="numbercontent"> ۱ </div>
+									<span class="fas fa-minus minus"></span>
+								</li>
+								<li>
+									<div class="age">
+										<div class="troublemaker">
+											کودک
+											<span class="ageinstruct">۲ تا ۱۲ سال</span>
+										</div>
+									</div>
+									<span class="fas fa-plus plus"></span>
+									<div class="numbercontent"> ۰ </div>
+									<span class="fas fa-minus minus"></span>
+								</li>
+								<li>
+									<div class="age">
+										<div class="troublemaker">
+											نوزاد
+											<span class="ageinstruct">۰ تا ۲ سال</span>
+										</div>
+									</div>
+									<span class="fas fa-plus plus"></span>
+									<div class="numbercontent"> ۰ </div>
+									<span class="fas fa-minus minus"></span>
+								</li>
+							</ul>
+							<div class="subandcan">
+								<a id="sub1" title="submit" href="">
+									تایید
+								</a>
+								<a id="can1" title="cancel" href="">
+									لغو
+								</a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="twoways">
+					<a href="" title="Two ways ticket"> 
+						رفت و برگشت
+						<span class="fas fa-caret-down triangle"></span>
+					</a>
+					<div class="dropdown2">
+						<div class="drp2content">
+							<div class="radio-list choosed">
+								<span class="fa fa-check"></span>
+								رفت و برگشت
+							</div>
+							<div class="radio-list">
+								یک طرفه
+							</div>
+							<div class="radio-list">
+								چند مسیری
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="economy">
+					<a href="" title="Class"> 
+						اکونومی کلاس
+						<span class="fas fa-caret-down triangle"></span>
+						<div class="dropdown3">
+							<div class="drp3content">
+								<div class="radio-list2 choosed">
+									<span class="fa fa-check"></span>
+									اکونومی کلاس
+								</div>
+								<div class="radio-list2">
+									بیزینس کلاس
+								</div>
+								<div class="radio-list2">
+									فرست کلاس
+								</div>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<div class="mid2">
+				<button class="searchbutton">
+					جستجو
+				</button>
+				<div class="calendar">
+					<div class="date1">
+						<i class="fa fa-calendar calicon"></i>
+						۱ مهر ۱۳۹۹
+					</div>
+					<div class="date2">
+						<i class="fa fa-calendar calicon"></i>
+						۲ مهر ۱۳۹۹
+					</div>
+				</div>
+				<a href="" title="search field">
+						<div class="searchfield">
+						<div class="from">
+							شهر یا فرودگاه مبدا 
+						</div>
+						<div class="semicircle">
+						</div>
+						<span class="fas fa-exchange-alt exchange"></span>
+						<div class="semicircle2">
+						</div>
+						<div class="to">
+							شهر یا فرودگاه مقصد
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="clear">
+			</div>
+		</div>
+		<div id="sec2">
+			<h1 id="heading">آژانس هواپیمایی الی گشت</h1>
+			<div class="layout">
+				<div class="box">
+					<i class="close fa fa-times"></i>
+					<img src="Logo/logo-e-2.png" alt="logo" id="logo">
+					<div class= "text">
+						<h3>آژانس هواپیمایی الی گشت | فروش بلیط هواپیما ، قطار ، هتل ، تور</h3>
+						<p>
+							شرکت دانش بنیان الی گشت، بزرگترین آژانس هواپیمایی در ایران است که دارای دفاتر رسمی در کشور ترکیه و انگلستان نیز می باشد، الی گشت ارائه دهنده خدمات خرید اینترنتی بلیط هواپیما، رزرو هتل، تور مسافرتی و بلیط قطار به همراه بیمه مسافرتی با پشتیبانی 24 ساعته برای شما مسافرین گرامی می باشد
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="layout">
+				<h3 class="section">رزرو هتل های خارجی</h3>
+				<div class="col1">
+					<a href="" title="Hotels Link">
+						<div class="minibox">
+							<div class="pic">
+								<img src="Images/Espinas.jpg" alt=Espinas>
+							</div>
+							<div class="mb">
+								<h3 class="hotel-name">
+									هتل اسپیناس
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+								</h3>
+								<p class="par">
+									تهران &nbsp| &nbsp۳ شب اقامت
+								</p>
+								<div class="info" style="direction: ltr; margin-left: 120px;">
+									1 x double/twin room
+								</div>
+								<div class="score">
+									<span class="gb">
+										۸.۸
+									</span>
+									<span class="sc">
+										عالی
+									</span>
+									&nbsp|&nbsp ۸۹۲ نظر
+								</div>
+								<span class="start">
+									شروع قیمت از
+								</span>
+								<span class="price">
+									۲،۸۱۰،۰۰۰ تومان
+								</span>
+							</div>
+						</div>
+					</a>	
+					<a href="" title="Hotels Link">
+						<div class="minibox">
+							<div class="pic">
+								<img src="Images/Singo.jpg" alt="Singo">
+							</div>
+							<div class="mb">
+								<h3 class="hotel-name">
+									هتل سینگو قشم
+									<i class="fa fa-star star"></i>
+									<i class="fa fa-star star"></i>
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+								</h3>
+								<p class="par">
+									قشم &nbsp| &nbsp۳ شب اقامت
+								</p>
+								<div class="info">
+									اتاق دو تخته دبل × ۱
+								</div>
+								<div class="score">
+									<span class="gb">
+										۹.۰
+									</span>
+									<span class="sc"> 
+										عالی
+									</span>
+									&nbsp|&nbsp ۲ نظر
+								</div>
+								<span class="start">
+									شروع قیمت از
+								</span>
+								<span class="price">
+									۹۸۵،۰۰۰ تومان
+								</span>
+							</div>
+						</div>
+					</a>
+					<a href="" title="Hotels Link">	
+						<div class="minibox">
+							<div class="pic">
+								<img src="Images/laleh kaya.jpg" alt="Laleh Kaya">
+							</div>
+							<div class="mb">
+								<h3 class="hotel-name">
+									هتل کایا لاله پارک
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+								</h3>
+								<p class="par">
+									تبریز &nbsp| &nbsp۱ شب اقامت
+								</p>
+								<div class="info">
+									اتاق دو تخته لوکس
+								</div>
+								<div class="score">
+									<span class="gb">
+										۹.۲
+									</span>
+									<span class="sc"> 
+										عالی
+									</span>
+									&nbsp|&nbsp ۳۵۶ نظر
+								</div>
+								<span class="start">
+									شروع قیمت از
+								</span>
+								<span class="price">
+									۸۸۰،۰۰۰ تومان
+								</span>
+							</div>
+						</div>
+					</a>
+					<a href="" title="Hotels Link">
+						<div class="minibox">
+							<div class="pic">
+								<img src="Images/tulu khorshid.jpg" alt="Tulu Khorshid">
+							</div>
+							<div class="mb">
+								<h3 class="hotel-name">
+									هتل سنتی خوان دو...
+									<i class="fa fa-star star"></i>
+									<i class="fa fa-star star"></i>
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+								</h3>
+								<p class="par">
+									یزد &nbsp| &nbsp۳ شب اقامت
+								</p>
+								<div class="info">
+									اتاق دو تخته هانی مون × ۱
+								</div>
+								<div class="score">
+									<span class="gb">
+										۹.۴
+									</span>
+									<span class="sc"> 
+										عالی
+									</span>
+									&nbsp|&nbsp ۳ نظر
+								</div>
+								<span class="start">
+									شروع قیمت از
+								</span>
+								<span class="price">
+									۷۵۵،۰۰۰ تومان
+								</span>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col2">
+					<a href="" title="Hotels Link">
+						<div class="minibox">
+							<div class="pic">
+								<img src="Images/pars kerman.jpg" alt="Pars">
+							</div>
+							<div class="mb">
+								<h3 class="hotel-name">
+									هتل پارس کرمان
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+								</h3>
+								<p class="par">
+									کرمان &nbsp| &nbsp۲ شب اقامت
+								</p>
+								<div class="info">
+									اتاق دو تخته توئین معمولی × ۱
+								</div>
+								<div class="score">
+									<span class="gb">
+										۸.۲
+									</span>
+									<span class="sc">
+										خیلی خوب
+									</span>
+									&nbsp|&nbsp ۲۳۶ نظر
+								</div>
+								<span class="start">
+										شروع قیمت از
+								</span>
+								<span class="price">
+									۱،۴۶۵،۰۰۰ تومان
+								</span>
+							</div>
+						</div>
+					</a>
+					<a href="" title="Hotels Link">
+						<div class="minibox">
+							<div class="pic">
+								<img src="Images/salar dare.jpg" alt="Salar Dare">
+							</div>
+							<div class="mb">
+								<h3 class="hotel-name">
+									هتل سالار دره
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+								</h3>
+								<p class="par">
+									ساری &nbsp| &nbsp۱ شب اقامت
+								</p>
+								<div class="info">
+									اتاق یک تخته × ۱
+								</div>
+								<div class="score">
+									<span class="gb">
+										۸.۴
+									</span>
+									<span class="sc"> 
+										خیلی خوب
+									</span>
+									&nbsp|&nbsp ۳۳۸ نظر
+								</div>
+								<span class="start">
+									شروع قیمت از
+								</span>
+								<span class="price">
+									۵۱۰،۰۰۰ تومان
+								</span>
+							</div>
+						</div>
+					</a>
+					<a href="" title="Hotels Link">
+						<div class="minibox">
+							<div class="pic">
+								<img src="Images/homa.jpg" alt="Homa">
+							</div>
+							<div class="mb">
+								<h3 class="hotel-name">
+									هتل هما ۲ مشهد
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+								</h3>
+								<p class="par">
+									مشهد &nbsp| &nbsp۱ شب اقامت
+								</p>
+								<div class="info">
+									سوئیت دو نفره × ۱
+								</div>
+								<div class="score">
+									<span class="gb">
+										۸.۸
+									</span>
+									<span class="sc"> 
+										عالی
+									</span>
+									&nbsp|&nbsp ۲۵۷ نظر
+								</div>
+								<span class="start">
+									شروع قیمت از
+								</span>
+								<span class="price">
+									۴۴۵،۰۰۰ تومان
+								</span>
+							</div>
+						</div>
+					</a>
+					<a href="" title="Hotels Link">
+						<div class="minibox">
+							<div class="pic">
+								<img src="Images/hotel-dariush-kish.jpg" alt="Dariush Hotel">
+							</div>
+							<div class="mb">
+								<h3 class="hotel-name">
+									هتل داریوش
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+								</h3>
+								<p class="par">
+									کیش &nbsp| &nbsp۳ شب اقامت
+								</p>
+								<div class="info">
+									اتاق دو تخته استاندارد رو به باغ × ۱
+								</div>
+								<div class="score">
+									<span class="gb">
+										۸.۸
+									</span>
+									<span class="sc"> 
+										عالی
+									</span>
+									&nbsp|&nbsp ۳۶۷ نظر
+								</div>
+								<span class="start">
+									شروع قیمت از
+								</span>
+								<span class="price">
+									۳،۴۰۵،۰۰۰ تومان
+								</span>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col3">
+					<a href="" title="Hotels Link">
+						<div class="minibox">
+							<div class="pic">
+								<img src="Images/zanjan.jpg" alt="Zanjan">
+							</div>
+							<div class="mb">
+								<h3 class="hotel-name">
+									هتل بزرگ زنجان
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+								</h3>
+								<p class="par">
+									زنجان &nbsp| &nbsp۱ شب اقامت
+								</p>
+								<div class="info">
+									اتاق سه تخته × ۱
+								</div>
+								<div class="score">
+									<span class="gb">
+										۷.۸
+									</span>
+									<span class="sc"> 
+										خوب
+									</span>
+									&nbsp|&nbsp ۱۶۰ نظر
+								</div>
+								<span class="start">
+									شروع قیمت از
+								</span>
+								<span class="price">
+									۸۸۵،۰۰۰ تومان
+								</span>
+							</div>
+						</div>
+					</a>
+					<a href="" title="Hotels Link">
+						<div class="minibox">
+							<div class="pic">
+								<img src="Images/shabestan.jpg" alt="Shabestan Hotel">
+							</div>
+							<div class="mb">
+								<h3 class="hotel-name">
+									هتل شبستان رشت
+									<i class="fa fa-star star"></i>
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+								</h3>
+								<p class="par">
+									رشت &nbsp| &nbsp۱ شب اقامت
+								</p>
+								<div class="info">
+									اتاق دو تخته توئین تایپ ۱× c
+								</div>
+								<div class="score">
+									<span class="gb">
+										۷.۸
+									</span>
+									<span class="sc"> 
+										خوب
+									</span>
+									&nbsp|&nbsp ۹۱ نظر
+								</div>
+								<span class="start">
+									شروع قیمت از
+								</span>
+								<span class="price">
+									۵۹۰،۰۰۰ تومان
+								</span>
+							</div>
+						</div>
+					</a>
+					<a href="" title="Hotels Link">
+						<div class="minibox">
+							<div class="pic">
+								<img src="Images/Abadan.jpg" alt="Abadan Hotel">
+							</div>
+							<div class="mb">
+								<h3 class="hotel-name">
+									هتل پارس کاروانسرا...
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+								</h3>
+								<p class="par">
+									آبادان &nbsp| &nbsp۱ شب اقامت
+								</p>
+								<div class="info">
+									دو تخته برای یک نفر × ۱
+								</div>
+								<div class="score">
+									<span class="gb">
+										۸.۰
+									</span>
+									<span class="sc"> 
+										خیلی خوب
+									</span>
+									&nbsp|&nbsp ۱۵۷ نظر
+								</div>
+								<span class="start">
+									شروع قیمت از
+								</span>
+								<span class="price">
+									۵۰۵،۰۰۰ تومان
+								</span>
+							</div>
+						</div>
+					</a>
+					<a href="" title="Hotels Link">
+						<div class="minibox">
+							<div class="pic">
+								<img src="Images/ideal.jpg" alt="Ideal Hostel">
+							</div>							
+							<div class="mb">
+								<h3 class="hotel-name">
+									هتل مهمنسرای ایده...
+									<i class="fa fa-star star"></i>
+									<i class="fa fa-star star"></i>
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+									<i class="fa fa-star checked"></i>
+								</h3>
+								<p class="par">
+									اردبیل &nbsp| &nbsp۴ شب اقامت
+								</p>
+								<div class="info">
+									اتاق دو تخته توئین × ۱
+								</div>
+								<div class="score">
+									<span class="gb">
+										۸.۲
+									</span>
+									<span class="sc"> 
+										خیلی خوب
+									</span>
+									&nbsp|&nbsp ۱۴ نظر
+								</div>
+								<span class="start">
+									شروع قیمت از
+								</span>
+								<span class="price">
+									۶۴۵،۰۰۰ تومان
+								</span>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="layout">
+				<h3 class="section">خرید بلیط هواپیما داخلی و خارجی</h3>
+				<div class="c1">
+					<div class="sbox">
+						<div class="deta">
+							<p class="desc">
+								بلیط هواپیما ارزان مشهد به یزد
+							</p>
+							<div class="airline">
+								<img src="Logo/Iran-Air.png" alt="Iran Air" title="Iran Air" class="iranair">
+								ایران ایر
+							</div>
+							<div class="flight-dest">
+								<span>مشهد</span>
+								<i class="fa fa-circle circle"></i>
+								-----------
+								<i class="fa fa-circle circle"></i>
+								<span> یزد</span>
+							</div>
+							<div class="flight-time">
+								<span>۱۱:۲۵</span>
+								<span>۱۳:۰۵</span>
+							</div>
+							<div class="flight-details">
+								<div class="flight-day">
+									۲۸ مهر ۱۳۹۹
+								</div>
+								<div class="flight-price">
+									۲۳۱‍‍‍٫۰۰۰ تومان
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sbox">
+						<div class="deta">
+							<p class="desc">
+								بلیط هواپیما ارزان تهران به اردبیل
+							</p>
+							<div class="airline">
+								<img src="Logo/Aseman.png" alt="Aseman Logo" title="Aseman Logo" class="aseman">
+								آسمان
+							</div>
+							<div class="flight-dest">
+								<span> تهران </span>
+								<i class="fa fa-circle circle"></i>
+								-----------
+								<i class="fa fa-circle circle"></i>
+								<span> اردبیل</span>
+							</div>
+							<div class="flight-time">
+								<span>۰۶:۰۵</span>
+								<span>۰۷:۱۰</span>
+							</div>
+							<div class="flight-details">
+								<div class="flight-day">
+									۳۱ شهریور ۱۳۹۹
+								</div>
+								<div class="flight-price">
+									۲۶۳‍‍‍٫۰۰۰ تومان
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sbox">
+						<div class="deta">
+							<p class="desc">
+								بلیط هواپیما ارزان گرگان به زابل
+							</p>
+							<div class="airline">
+								<img src="Logo/Aseman.png" alt="Aseman Logo" title="Aseman Logo" class="aseman">
+								آسمان
+							</div>
+							<div class="flight-dest">
+								<span> گرگان </span>
+								<i class="fa fa-circle circle"></i>
+								-----------
+								<i class="fa fa-circle circle"></i>
+								<span> زابل</span>
+							</div>
+							<div class="flight-time">
+								<span>۱۶:۱۰</span>
+								<span>۱۷:۴۵</span>
+							</div>
+							<div class="flight-details">
+								<div class="flight-day">
+									۱۷ مهر ۱۳۹۹
+								</div>
+								<div class="flight-price">
+									۲۸۲‍‍‍٫۰۰۰ تومان
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sbox">
+						<div class="deta">
+							<p class="desc">
+								بلیط هواپیما ارزان شیراز به آبادان
+							</p>
+							<div class="airline">
+								<img src="Logo/Aseman.png" alt="Aseman Logo" title="Aseman Logo" class="aseman">
+								آسمان
+							</div>
+							<div class="flight-dest">
+								<span> شیراز </span>
+								<i class="fa fa-circle circle"></i>
+								-----------
+								<i class="fa fa-circle circle"></i>
+								<span> آبادان</span>
+							</div>
+							<div class="flight-time">
+								<span>۲۰:۰۰</span>
+								<span>۲۱:۰۵</span>
+							</div>
+							<div class="flight-details">
+								<div class="flight-day">
+									۱۳ مهر ۱۳۹۹
+								</div>
+								<div class="flight-price">
+									۲۹۶‍‍‍٫۰۰۰ تومان
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="c2">
+					<div class="sbox">
+						<div class="deta">
+							<p class="desc">
+								بلیط هواپیما ارزان اصفهان به قشم
+							</p>
+							<div class="airline">
+								<img src="Logo/Qeshm-Air.png" alt="Qheshm Air Logo" title="Qheshm Air Logo" class="qeshmair"> 
+								قشم ایر
+							</div>
+							<div class="flight-dest">
+								<span> اصفهان </span>
+								<i class="fa fa-circle circle"></i>
+								-----------
+								<i class="fa fa-circle circle"></i>
+								<span> قشم</span>
+							</div>
+							<div class="flight-time">
+								<span>۱۳:۴۵</span>
+								<span>۱۵:۱۵</span>
+							</div>
+							<div class="flight-details">
+								<div class="flight-day">
+									۲ مهر ۱۳۹۹
+								</div>
+								<div class="flight-price">
+									۳۶۴‍‍‍٫۰۰۰ تومان
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sbox">
+						<div class="deta">
+							<p class="desc">
+								بلیط هواپیما ارزان رشت به اهواز
+							</p>
+							<div class="airline">
+								<img src="Logo/Iran-Air.png" alt="Iran Air" title="Iran Air" class="iranair">
+								ایران ایر
+							</div>
+							<div class="flight-dest">
+								<span> رشت </span>
+								<i class="fa fa-circle circle"></i>
+								-----------
+								<i class="fa fa-circle circle"></i>
+								<span> اهواز</span>
+							</div>
+							<div class="flight-time">
+								<span>۰۹:۵۵</span>
+								<span>۱۱:۵۵</span>
+							</div>
+							<div class="flight-details">
+								<div class="flight-day">
+									۱ مهر ۱۳۹۹
+								</div>
+								<div class="flight-price">
+									۴۰۱‍‍‍٫۰۰۰ تومان
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sbox">
+						<div class="deta">
+							<p class="desc">
+								بلیط هواپیما ارزان اهواز به کرمان
+							</p>
+							<div class="airline">
+								<img class="mahanair" src="Logo/Mahan-Air.png" alt="Mahan air Logo" title="Mahan air Logo">
+								ماهان ایر
+							</div>
+							<div class="flight-dest">
+								<span> اهواز </span>
+								<i class="fa fa-circle circle"></i>
+								-----------
+								<i class="fa fa-circle circle"></i>
+								<span> کرمان</span>
+							</div>
+							<div class="flight-time">
+								<span>۱۰:۰۰</span>
+								<span>۱۲:۴۵</span>
+							</div>
+							<div class="flight-details">
+								<div class="flight-day">
+									۱ مهر ۱۳۹۹
+								</div>
+								<div class="flight-price">
+									۴۸۱‍‍‍٫۰۰۰ تومان
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sbox">
+						<div class="deta">
+							<p class="desc">
+								بلیط هواپیما ارزان ساری به بندرعباس
+							</p>
+							<div class="airline">
+								<img src="Logo/VareshAirlnes.png" alt="Varesh airline Logo" title="Varesh airline Logo" class="vareshair">
+								وارش
+							</div>
+							<div class="flight-dest">
+								<span> ساری </span>
+								<i class="fa fa-circle circle"></i>
+								-----------
+								<i class="fa fa-circle circle"></i>
+								<span> بندرعباس</span>
+							</div>
+							<div class="flight-time">
+								<span>۱۸:۴۵</span>
+								<span>۲۰:۴۵</span>
+							</div>
+							<div class="flight-details">
+								<div class="flight-day">
+									۳۱ شهریور ۱۳۹۹
+								</div>
+								<div class="flight-price">
+									۵۰۷‍‍‍٫۰۰۰ تومان
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="layout">
+				<button class="next">
+					<i class="fas fa-angle-right angle"></i>
+				</button>
+				<button class="previous">
+					<i class="fas fa-angle-left angle"></i>
+				</button>
+				<h3 class="section">تور های داخلی و خارجی الی گشت</h3>
+				<div class="colu1">
+					<div class="cbox">
+						<div class="pic1">
+							<div class="duration">
+								<a href="" title="Duration-Of-Stay"><p>۳ شب اقامت</p></a>
+							</div>
+						</div>
+						<div class="hotelinfos">
+							<div class="hicontent">
+								<div class="hititle">
+									<a href="" title="Hotel information titles">
+										تور مشهد از قشم
+									</a>
+								</div>
+								<div class="hilocat">
+									<i class="fas fa-city hicity"></i>
+									هتل حلما
+								</div>
+								<div class="hiairline">
+									قشم ایر
+									<span class="fa fa-plane hiplane"></span>
+								</div>
+								<div class="hiprice">
+									۱٫۹۰۶٫۰۰۰ تومان
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cbox">
+						<div class="pic2">
+							<div class="duration">
+								<a href="" title="Duration-Of-Stay"><p>۳ شب اقامت</p></a>
+							</div>
+						</div>
+						<div class="hotelinfos">
+							<div class="hicontent">
+								<div class="hititle">
+									<a href="" title="Hotel information titles">
+										تور تهران از کیش
+									</a>
+								</div>
+								<div class="hilocat">
+									<i class="fas fa-city hicity"></i>
+									هتل بزرگ تهران ۲
+								</div>
+								<div class="hiairline">
+									ماهان ایر
+									<span class="fa fa-plane hiplane"></span>
+								</div>
+								<div class="hiprice">
+									۴٫۳۱۱٫۸۰۰ تومان
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="colu2">
+					<div class="cbox">
+						<div class="pic3">
+							<div class="duration">
+								<a href="" title="Duration-Of-Stay"><p>۳ شب اقامت</p></a>
+							</div>
+						</div>
+						<div class="hotelinfos">
+							<div class="hicontent">
+								<div class="hititle">
+									<a href="" title="Hotel information titles">
+										تور مشهد از قشم
+									</a>
+								</div>
+								<div class="hilocat">
+									<i class="fas fa-city hicity"></i>
+									هتل آبان
+								</div>
+								<div class="hiairline">
+									قشم ایر
+									<span class="fa fa-plane hiplane"></span>
+								</div>
+								<div class="hiprice">
+									۲٫۱۹۱٫۰۰۰ تومان
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cbox">
+						<div class="pic4">
+							<div class="duration">
+								<a href="" title="Duration-Of-Stay"><p>۳ شب اقامت</p></a>
+							</div>
+						</div>
+						<div class="hotelinfos">
+							<div class="hicontent">
+								<div class="hititle">
+									<a href="" title="Hotel information titles">
+										تور مشهد از قشم
+									</a>
+								</div>
+								<div class="hilocat">
+									<i class="fas fa-city hicity"></i>
+									هتل الماس مشهد
+								</div>
+								<div class="hiairline">
+									جورجین نشنال ایرلاینز
+									<span class="fa fa-plane hiplane"></span>
+								</div>
+								<div class="hiprice">
+									۲٫۲۸۶٫۰۰۰ تومان
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="layout">
+				<h3 class="section">خرید بلیط قطار</h3>
+				<div class="c1">
+					<div class="sbox">
+						<div class="deta">
+							<p class="desc">
+								قطار ۳ ستاره۶ تخته پارسي
+							</p>
+							<div class="trainline">
+								<img src="Logo/Raja.jpg" alt="Raja Logo" title="Raja Logo" class="Raja">
+								 رجا
+							</div>
+							<div class="train-dest">
+								<span>تهران</span>
+								<i class="fa fa-circle circle"></i>
+								-----------
+								<i class="fa fa-circle circle"></i>
+								<span> مشهد</span>
+							</div>
+							<div class="train-time">
+								<span>۰۵:۱۵</span>
+								<span>۱۷:۵۵</span>
+							</div>
+							<div class="train-details">
+								<div class="train-day">
+									۱۱ آبان ۱۳۹۹
+								</div>
+								<div class="train-price">
+									۱۱۴‍‍‍٫۰۰۰ تومان
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sbox">
+						<div class="deta">
+							<p class="desc">
+								قطار ۳ ستاره البرز
+							</p>
+							<div class="trainline">
+								<img src="Logo/Raja.jpg" alt="Raja Logo" title="Raja Logo" class="Raja">
+								رجا
+							</div>
+							<div class="train-dest">
+								<span>تهران</span>
+								<i class="fa fa-circle circle"></i>
+								-----------
+								<i class="fa fa-circle circle"></i>
+								<span> کرمان</span>
+							</div>
+							<div class="train-time">
+								<span>۰۰:۴۳</span>
+								<span>۱۰:۵۰</span>
+							</div>
+							<div class="train-details">
+								<div class="train-day">
+									۹ آبان ۱۳۹۹
+								</div>
+								<div class="train-price">
+									۱۱۹‍‍‍٫۰۰۰ تومان
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sbox">
+						<div class="deta">
+							<p class="desc">
+								قطار ۳ ستاره البرز 
+							</p>
+							<div class="trainline">
+								<img src="Logo/Raja.jpg" alt="Raja Logo" title="Raja Logo" class="Raja">
+								رجا
+							</div>
+							<div class="train-dest">
+								<span>تهران</span>
+								<i class="fa fa-circle circle"></i>
+								-----------
+								<i class="fa fa-circle circle"></i>
+								<span> زاهدان</span>
+							</div>
+							<div class="train-time">
+								<span>۰۸:۰۵</span>
+								<span>۱۰:۵۰</span>
+							</div>
+							<div class="train-details">
+								<div class="train-day">
+									۷ آبان ۱۳۹۹
+								</div>
+								<div class="train-price">
+									۱۷۷‍‍‍٫۰۰۰ تومان
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sbox">
+						<div class="deta">
+							<p class="desc">
+								قطار ۴ ستاره ۴ تخته سرير(VIP)
+							</p>
+							<div class="trainline">
+								<img src="Logo/Raja.jpg" alt="Raja Logo" title="Raja Logo" class="Raja">
+								رجا
+							</div>
+							<div class="train-dest">
+								<span>تهران</span>
+								<i class="fa fa-circle circle"></i>
+								-----------
+								<i class="fa fa-circle circle"></i>
+								<span> شیراز</span>
+							</div>
+							<div class="train-time">
+								<span>۰۷:۴۵</span>
+								<span>۱۶:۵۰</span>
+							</div>
+							<div class="train-details">
+								<div class="train-day">
+									۷ آبان ۱۳۹۹
+								</div>
+								<div class="train-price">
+									۱۸۹‍‍‍٫۰۰۰ تومان
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="c2">
+					<div class="sbox">
+						<div class="deta">
+							<p class="desc">
+								قطار ۴ ستاره ۴ تخته سرير(VIP)
+							</p>
+							<div class="trainline">
+								<img src="Logo/Raja.jpg" alt="Raja Logo" title="Raja Logo" class="Raja">
+								رجا
+							</div>
+							<div class="train-dest">
+								<span>تهران</span>
+								<i class="fa fa-circle circle"></i>
+								-----------
+								<i class="fa fa-circle circle"></i>
+								<span>بندر عباس</span>
+							</div>
+							<div class="train-time">
+								<span>۰۹:۰۰</span>
+								<span>۱۳:۲۰</span>
+							</div>
+							<div class="train-details">
+								<div class="train-day">
+									۱۳ آبان ۱۳۹۹
+								</div>
+								<div class="train-price">
+									۲۶۷‍‍‍٫۰۰۰ تومان
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sbox">
+						<div class="deta">
+							<p class="desc">
+								قطار ۵ ستاره ويژه سلامت فدك
+							</p>
+							<div class="trainline">
+								<img src="Logo/Fadak.png" alt="Fadak logo" title="Fadak logo" class="Fadak">
+								فدک
+							</div>
+							<div class="train-dest">
+								<span>مشهد</span>
+								<i class="fa fa-circle circle"></i>
+								-----------
+								<i class="fa fa-circle circle"></i>
+								<span> تهران</span>
+							</div>
+							<div class="train-time">
+								<span>۰۵:۰۰</span>
+								<span>۱۸:۴۵</span>
+							</div>
+							<div class="train-details">
+								<div class="train-day">
+									۶ آبان ۱۳۹۹
+								</div>
+								<div class="train-price">
+									۳۴۰‍‍‍٫۰۰۰ تومان
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sbox">
+						<div class="deta">
+							<p class="desc">
+								قطار ۵ ستاره زندگي با عصرانه
+							</p>
+							<div class="trainline">
+								<img src="Logo/Raja.jpg" alt="Raja Logo" title="Raja Logo" class="Raja">
+								رجا
+							</div>
+							<div class="train-dest">
+								<span>مشهد</span>
+								<i class="fa fa-circle circle"></i>
+								-----------
+								<i class="fa fa-circle circle"></i>
+								<span>رشت</span>
+							</div>
+							<div class="train-time">
+								<span>۱۱:۳۰</span>
+								<span>۱۹:۵۰</span>
+							</div>
+							<div class="train-details">
+								<div class="train-day">
+									۱۳ آبان ۱۳۹۹
+								</div>
+								<div class="train-price">
+									۳۷۹‍‍‍٫۰۰۰ تومان
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sbox">
+						<div class="deta">
+							<p class="desc">
+								قطار ۲ ستاره۶ تخته نسيم
+							</p>
+							<div class="trainline">
+								<img src="Logo/Raja.jpg" alt="Raja Logo" title="Raja Logo" class="Raja">
+								رجا
+							</div>
+							<div class="train-dest">
+								<span>تهران</span>
+								<i class="fa fa-circle circle"></i>
+								-----------
+								<i class="fa fa-circle circle"></i>
+								<span> ساری</span>
+							</div>
+							<div class="train-time">
+								<span>۰۶:۳۵</span>
+								<span>۱۴:۰۵</span>
+							</div>
+							<div class="train-details">
+								<div class="train-day">
+									۶ آبان ۱۳۹۹
+								</div>
+								<div class="train-price">
+									۴۶‍‍‍٫۰۰۰ تومان
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+		</div>
+		<div class="layout">
+			<ul class="al">
+				<li><a href="" title="active links"> مسیر های داخلی</a></li>
+				<li><a href="" title="active links">مسیر های خارجی</a></li>
+				<li><a href="" title="active links">ایرلاین ها</a></li>
+				<li><a href="" title="active links">کشور ها</a></li>
+			</ul>
+		</div>
+		<br>
+		<div class="layout">
+				<div class="lastpart">
+					<div class="colum1">
+						<ul class="city">
+							تهران
+							<div class="bullet">
+								<li>
+									<a href="" title="city contents">تور </a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">پرواز</a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">هتل</a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">قطار</a>
+								</li>
+							</div>
+						</ul>
+						<ul class="city">
+							قشم
+							<div class="bullet">
+								<li>
+									<a href="" title="city contents">تور</a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">پرواز</a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">هتل</a>
+								</li>
+							</div>
+						</ul>
+						<ul class="city">
+							اهواز
+							<div class="bullet">
+								<li>
+									<a href="" title="city contents">تور </a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">پرواز</a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">هتل</a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">قطار</a>
+								</li>
+							</div>
+						</ul>
+					</div>
+					<div class="colum2">
+						<ul class="city">
+							اصفهان
+							<div class="bullet">
+								<li>
+									<a href="" title="city contents">تور </a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">پرواز</a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">هتل</a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">قطار</a>
+								</li>
+							</div>
+						</ul>
+						<ul class="city">
+							شیراز
+							<div class="bullet">
+								<li>
+									<a href="" title="city contents">تور </a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">پرواز</a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">هتل</a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">قطار</a>
+								</li>
+							</div>
+						</ul>
+						<ul class="city">
+							کرمان
+							<div class="bullet">
+								<li>
+									<a href="" title="city contents">تور </a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">پرواز</a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">هتل</a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">قطار</a>
+								</li>
+							</div>
+						</ul>
+					</div>
+					<div class="colum3">
+						<ul class="city">
+							کیش
+							<div class="bullet">
+								<li>
+									<a href="" title="city contents">تور </a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">پرواز</a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">هتل</a>
+								</li>
+							</div>
+						</ul>
+						<ul class="city">
+							مشهد
+							<div class="bullet">
+								<li>
+									<a href="" title="city contents">تور </a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">پرواز</a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">هتل</a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">قطار</a>
+								</li>
+							</div>
+						</ul>
+						<ul class="city">
+							بندر عباس
+							<div class="bullet">
+								<li>
+									<a href="" title="city contents">تور </a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">پرواز</a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">هتل</a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">قطار</a>
+								</li>
+							</div>
+						</ul>
+					</div>
+					<div class="colum4">
+						<ul class="city">
+							اردبیل
+							<div class="bullet">
+								<li>
+									<a href="" title="city contents">تور </a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">پرواز</a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">هتل</a>
+								</li>
+							</div>
+						</ul>
+						<ul class="city">
+							آبادان
+							<div class="bullet">
+								<li>
+									<a href="" title="city contents">تور </a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">پرواز</a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">هتل</a>
+								</li>
+							</div>
+						</ul>
+						<ul class="city">
+							تبریز
+							<div class="bullet">
+								<li>
+									<a href="" title="city contents">تور </a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">پرواز</a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">هتل</a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">قطار</a>
+								</li>
+							</div>
+						</ul>
+					</div>
+					<div class="colum5">
+						<ul class="city">
+							زاهدان
+							<div class="bullet">
+								<li>
+									<a href="" title="city contents">تور </a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">پرواز</a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">هتل</a>
+								</li>
+							</div>
+						</ul>
+						<ul class="city">
+							چابهار
+							<div class="bullet">
+								<li>
+									<a href="" title="city contents">تور </a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">پرواز</a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">هتل</a>
+								</li>
+							</div>
+						</ul>
+						<ul class="city">
+							بوشهر
+							<div class="bullet">
+								<li>
+									<a href="" title="city contents">تور </a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">پرواز</a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">هتل</a>
+								</li>
+							</div>
+						</ul>
+					</div>
+					<div class="colum6">
+						<ul class="city">
+							ارومیه
+							<div class="bullet">
+								<li>
+									<a href="" title="city contents">تور </a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">پرواز</a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">هتل</a>
+								</li>
+							</div>
+						</ul>
+						<ul class="city">
+							عسلویه
+							<div class="bullet">
+								<li>
+									<a href="" title="city contents">تور </a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">پرواز</a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">هتل</a>
+								</li>
+							</div>
+						</ul>
+						<ul class="city">
+							ماهشهر
+							<div class="bullet">
+								<li>
+									<a href="" title="city contents">تور </a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">پرواز</a>
+								</li>
+								•
+								<li>
+									<a href="" title="city contents">هتل</a>
+								</li>
+							</div>
+						</ul>
+					</div>
+				</div>
+				<footer>
+					<div class="footimg">
+						<a href="" title="HumanRight">
+							<img src="Logo/حقوق مسافر.png" alt="نماد حقوق مسافر" title="نماد حقوق مسافر">
+						</a>
+						<a href="" title="HumanRight">
+							<img src="Logo/CAO.jpg" alt="سازمان هواپیمایی کشور" title="سازمان هواپیمایی کشور">
+						</a>
+						<a href="" title="HumanRight">
+							<img src="Logo/Samandehi.png" alt="Samandehi" title="Samandehi">
+						</a>
+						<a href="" title="HumanRight">
+							<img src="Logo/نماد اعتماد الکترونیک.jpg" alt="نماد اعتماد الکترونیک" title="نماد اعتماد الکترونیک">
+						</a>
+						<a href="" title="HumanRight">
+							<img src="Logo/IATA.jpg" alt="International Air Transport Association" title="International Air Transport Association">
+						</a>
+					</div>
+					<div class="footerdescription">
+						الی گشت با ارائه بهترین و با کیفیت ترین خدمات گردشگری به صورت آنلاین می کوشد تا به عنوان معتبرترین شرکت گردشگری در ایران، تجربه ی لذت بخش یک رزرو اینترنتی را برایتان تداعی کند. شما در هر کجای دنیا که باشید، در هر ساعت از شبانه روز می توانید از طریق سایت الی گشت بلیط هواپیما، بلیط چارتر، رزرو هتل ارزان قیمت، تورهای مسافرتی و تور لحظه آخری را با پایین ترین نرخ ها انتخاب کنید. همراه الی گشت با اطمینان از انتخابتان، قدم در مسیر فراموش نشدنی سفرتان بگذارید
+					</div>
+					<div class="contact">
+						<a href="" title="Contact">
+							<i class="fab fa-twitter cont"></i>
+						</a>
+						<a href="" title="Contact">
+							<i class="fab fa-facebook-f cont"></i>
+						</a>
+						<a href="" title="Contact">
+							<i class="fab fa-linkedin-in cont"></i>
+						</a>
+						<a href="" title="Contact">
+							<i class="fab fa-instagram cont"></i>
+						</a>
+						<a href="" title="Contact">
+							<i class="fab fa-telegram-plane cont"></i>
+						</a>
+					</div>
+					<div class="contact2">
+						<a href="" title="contact">درباره ما</a>
+						<a href="" title="contact">تماس با ما</a>
+						<a href="" title="contact">باشگاه مشتریان</a>
+						<a href="" title="contact">راهنمای خرید</a>
+						<a href="" title="contact">سوالات متداول</a>
+					</div>
+				</footer>
+				<div class="fixed">
+					<a href="#top" title="go to top"><span class="fa fa-angle-up fa-lg"></span></a>
+				</div>
+		</div>
+    </body>
+</html>
