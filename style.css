@@ -13,11 +13,11 @@ font-weight: normal;
 
 nav{
     height: 65px;
+    width: 1519.2px;
     background-color: white;
+    margin: 0px auto;
     position: sticky;
-    top: 0px;
-    padding-left: 30px;
-    padding-right: 30px;
+    top: 0px;   
     z-index: 10;
 }
 #textlogo{
@@ -79,7 +79,9 @@ nav{
 }
 #sec1{
     height: 744px;
+    width: 1519.2px;
     background-color: white;
+    margin: 0px auto;
 }
 .mid{
     border-radius: 10px;
@@ -425,6 +427,8 @@ nav{
 }
 #sec2{
     background-color: #ebecf0;
+    width: 1519.2px;
+    margin: 0px auto;
 }
 .layout{
     margin: 0px auto;
