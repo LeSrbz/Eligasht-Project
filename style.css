@@ -826,9 +826,9 @@ nav{
 .hiplane, .hicity{
     color:#ff471a;
 }
-.al{
+.al{  /**Active Links**/
     border-bottom: 1px solid #5392bf;
-    margin-top: 50px
+    margin-top: 50px;
 }
 .al li{
     display: inline-block;
@@ -875,6 +875,10 @@ nav{
 }
 .bullet{
     color: #0071c2;
+}
+#sec3{
+        width: 1519.2px;
+        margin: 0px auto;
 }
 .lastpart{
     margin-bottom: 150px;
