@@ -238,7 +238,7 @@ nav{
     font-family: newfont;
     line-height: 50px;
 }
-.dropdown{
+#dropdown{
     width: 297px;
     height: 295px;
     background-color: white;
@@ -247,6 +247,8 @@ nav{
     border-radius: 10px;
     display: none;
     font-size: 15px;
+    top: -25px;
+    right: -1px;
 }
 .drp1content{
     height: 267px;
@@ -370,10 +372,8 @@ nav{
 #sub1:hover, #can1:hover{
     background-color: rgba(0,0,0,.12);
 }
-.numberofpassengers:hover .dropdown{
+#dropdown:target {
     display: block;
-    top: -25px;
-    right: -1px;
 }
 .twoways:hover .dropdown2{
     display: block;
@@ -385,11 +385,11 @@ nav{
     top: -25px;
     right: 210px;
 }
-.dropdown ul{
+#dropdown ul{
     height: 178px;
     width: 295px;
 }
-.dropdown ul>li{
+#dropdown ul>li{
     list-style-type: none;
 }
 .triangle{
@@ -436,7 +436,6 @@ nav{
     font-family: newfont;
     direction: rtl;
     position: relative;
-    /**border: 2px solid black;**/
 }
 #heading{
     text-align: center;
