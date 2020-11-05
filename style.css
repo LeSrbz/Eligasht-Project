@@ -2,8 +2,8 @@
 @font-face {
 font-family: newfont;
 src: url('https://f.elicdn.com/assets/dist/fonts/iransharp/en-num/iransharp_regular_web.eot');
-src: url('https://f.elicdn.com/assets/dist/fonts/iransharp/en-num/iransharp_regular_web.woff2') format("woff2"), 
-    url('https://f.elicdn.com/assets/dist/fonts/iransharp/en-num/iransharp_regular_web.woff') format("woff"), 
+src: url('Persian Font/iransharp_regular_web.woff2') format("woff2"), 
+    url('Persian Font/iransharp_regular_web.woff2') format("woff"), 
     url('https://f.elicdn.com/assets/dist/fonts/iransharp/en-num/iransharp_regular_web.ttf') format("truetype"), 
     url('https://f.elicdn.com/assets/dist/fonts/iransharp/en-num/iransharp_regular_web.svg') format("svg");
 font-display: swap;
@@ -59,6 +59,7 @@ nav{
     position: fixed;
     right: 0px;
     top: 120px;
+    z-index: 11;
 }
 .aside li{
     width: 76px;
@@ -69,6 +70,9 @@ nav{
     font-size: 12.5px;
     padding: 15px 10px;
 }
+.aside li a div{
+    margin-bottom: 5px;
+}
 .aside li:hover {
     background-color: #F2F2F0
 }
@@ -76,6 +80,9 @@ nav{
     text-decoration: none;
     color: #545454;
     line-height: 20px;
+}
+.mc span{
+    font-size: 20px;
 }
 #sec1{
     height: 744px;
@@ -99,7 +106,7 @@ nav{
     font-family: newfont;
     font-size: 16px;
     color: #272e4f;
-    line-height: 20px;
+    line-height: 35px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -109,7 +116,7 @@ nav{
 }
 .midicon{
     font-size: 32px;
-    line-height: 55px;
+    line-height: 60px;
     -webkit-text-stroke: 1.5px #ff471a;;
     color: transparent;
 }
@@ -550,11 +557,14 @@ nav{
     line-height: 15px;
     color:lightgrey;
 }
-.minibox .par{
+.minibox .residence-time{
     font-size: 12px;
     margin-right: 25px;	
     color: black;
     font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    width: 115px;
 }
 .info{
     font-size: 12px;
